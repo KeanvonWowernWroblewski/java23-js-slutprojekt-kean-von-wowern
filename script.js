@@ -28,7 +28,7 @@ function fetchMoviesAndTvshows(type) {
             return response.json();
         })
         .then(data => {
-            // slice the results to only take the top 10
+            // slices the results to only take the top 10
             const topTenResults = data.results.slice(0, 10);
             if (topTenResults.length === 0) {
                 displayNoResults();
