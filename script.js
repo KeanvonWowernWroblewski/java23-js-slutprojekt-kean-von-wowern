@@ -45,6 +45,8 @@ function fetchMoviesAndTvshows(type) {
 //displays movies and tvshows - clears existing content and loops over array appending the results in list items
 
 function displayMoviesAndTvshows(movies) {
+    clearErrorMessages();
+
     const moviesList = document.getElementById('moviesList');
     moviesList.innerHTML = '';
 
@@ -102,6 +104,8 @@ function search(query, type) {
 // function similar to displaymoviesandtvshows but for people
 
 function displayPeople(people) {
+    clearErrorMessages();
+
     const moviesList = document.getElementById('moviesList');
     moviesList.innerHTML = '';
 
@@ -146,11 +150,26 @@ function displayPeople(people) {
 
 function displayNoResults() {
     const moviesList = document.getElementById('moviesList');
-    moviesList.innerHTML = `<li class='noResults'>No results found</li>`;
+    if (!document.getElementById('noResults')) {
+        moviesList.innerHTML = `<li id="noResults" class='noResults'>No results found</li>`;
+    }
 }
 
 function displayError() {
     const moviesList = document.getElementById('moviesList');
-    moviesList.innerHTML = `<li class='error'>An error occurred</li>`;
+    if (!document.getElementById('error')) {
+        moviesList.innerHTML = `<li id="error" class='error'>An error occurred</li>`;
+    }
 }
 
+
+function clearErrorMessages() {
+    const noResultsMessage = document.getElementById('noResults');
+    const errorMessage = document.getElementById('error');
+    if (noResultsMessage) {
+        noResultsMessage.remove();
+    }
+    if (errorMessage) {
+        errorMessage.remove();
+    }
+}
