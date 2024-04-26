@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif; 
+    background-color: #fff8dc; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px; 
+}
+
+h1 {
+    color: #daa520; 
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.buttons, .searchBox {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #daa520; 
+    color: white;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #b8860b; 
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #daa520; 
+    border-radius: 4px;
+    width: 300px; 
+    transition: border-color 0.3s ease; 
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #b8860b; 
+}
+
+#moviesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#moviesList li {
+    margin: 10px auto; 
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    background-color: #fffff0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    width: 95%; 
+    transition: transform 0.3s ease; 
+}
+
+#moviesList li:hover {
+    transform: scale(1.05); 
+}
+
+.movie img, .person img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #b8860b; 
+}
+
+p, li {
+    color: #555; 
+    line-height: 1.5;
+    font-size: 16px; 
+}
+
+#moviesList li.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 10px;
+}
+
+.person ul li {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person ul li img {
+    width: 100px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
